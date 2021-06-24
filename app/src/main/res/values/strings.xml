@@ -1,0 +1,241 @@
+<resources>
+    <string name="app_name">kotlin</string>
+    <string name="no_internet_connection">No internet connection</string>
+    <string name="ok">OK</string>
+    <string name="retry">Retry</string>
+    <string name="share_suing">Share using</string>
+    <string name="loading">Loading</string>
+    <string name="please_wait">Please wait…</string>
+    <string name="yes">Yes</string>
+    <string name="no">No</string>
+    <string name="close_app_message">Are you sure you want to exist?</string>
+    <string name="select">Select</string>
+    <string name="location_permission_message">Access location permission is required in order to get device location,
+        without it you won\'t be able to use this feature.\nWould you like to keep it that way?</string>
+    <string name="camera_and_write_external_storage_permission_message">Camera and storage permissions are required in order to use camera,
+        without them you won\'t be able to use this feature.\nWould you like to keep it that way?</string>
+    <string name="i_am_sure">I\'m Sure</string>
+    <string name="location_permission_setting_message">you have denied location permission.
+        \nIn order to use this feature you will redirect to app setting > permissions then enable location permission.\n
+    Would you like to go to setting now?</string>
+    <string name="pix_permission_setting_message">you have denied camera or storage permission.
+        \nIn order to use this feature you will redirect to app setting > permissions then enable camera and storage.\n
+    Would you like to go to setting now?</string>
+    <string name="go_setting">Go to setting</string>
+    <string name="enable_location_message">In order to use location, you have to enable device location so we can get your location and use this feature.\n
+    Would you like to use this feature now?</string>
+    <string name="enable_location">Enable location</string>
+    <string name="key_1">1</string>
+    <string name="key_2">2</string>
+    <string name="key_3">3</string>
+    <string name="key_4">4</string>
+    <string name="key_5">5</string>
+    <string name="key_6">6</string>
+    <string name="key_7">7</string>
+    <string name="key_8">8</string>
+    <string name="key_9">9</string>
+    <string name="key_0">0</string>
+    <string name="login">Login</string>
+    <string name="stock_requests">Stock Requests</string>
+    <string name="manage_order">Manage Order</string>
+    <string name="manage_cashiers">Manage Cashiers</string>
+    <string name="my_balance">My Balance</string>
+    <string name="stock_reports">Stock Reports</string>
+    <string name="sales_report">Sales Report</string>
+    <string name="purchase_offline">Purchase Offline</string>
+    <string name="purchase_online">Purchase Online</string>
+    <string name="load_parameters">Load Parameters</string>
+    <string name="sync_sales">Sync Sales</string>
+    <string name="bill_payment">Bill Payment</string>
+    <string name="top_up">Top Up</string>
+    <string name="transfer_balance">Transfer Balance</string>
+    <string name="change_password">Change Password</string>
+    <string name="confirm">Confirm</string>
+    <string name="cancel">Cancel</string>
+    <string name="download">Download</string>
+    <string name="your_order_is_reserved_partially">Your Order Is Reserved Partially</string>
+    <string name="read_phone_state_setting_message"><![CDATA["  you have denied phone permission.         \nIn order to use this feature you will redirect to app setting > permissions then enable phone.         \nWould you like to go to setting now?"]]></string>
+    <string name="save">Save</string>
+    <string name="placeholder">PlaceHolder</string>
+    <string name="ref">Ref</string>
+    <string name="total_amount">Total Amount:</string>
+    <string name="pos_configuration">Pos Configuration</string>
+    <string name="inject_key">Inject Key</string>
+    <string name="feedback">Feedback</string>
+    <string name="ticket">Ticket</string>
+    <string name="the_order">The Order</string>
+    <string name="add_new_cashier">Add New Cashier</string>
+    <string name="information">Information</string>
+    <string name="enter_cashier_name">Enter Cashier Name</string>
+    <string name="password">Password</string>
+    <string name="active">Active</string>
+    <string name="privileges">Privileges</string>
+    <string name="offline">Offline</string>
+    <string name="online">Online</string>
+    <string name="add">Add</string>
+    <string name="device_version_error_message">Invalid Device Version</string>
+    <string name="read_location_write_message">Read Phone, storage and Location permissions are required to use Application,
+        without them you won\'t be able to use App.\nWould you like to keep it that way?</string>
+    <string name="admin_login">Admin Login</string>
+    <string name="request_report">Request Report</string>
+    <string name="terminal_id">Terminal Id</string>
+    <string name="services">Services</string>
+    <string name="stc_provider">STC Provider</string>
+    <string name="place_order">Place Order</string>
+    <string name="location_error_message">You are out of required range</string>
+    <string name="ref_hash">Ref #</string>
+    <string name="print_voucher">Print Voucher</string>
+    <string name="from_service">" from service "</string>
+    <string name="update">Update</string>
+
+    <string name="validation_200">Password Exist before</string>
+    <string name="validation_201">Password Length must be exactly 6 digits</string>
+    <string name="validation_202">Cashier Name Exist Before</string>
+    <string name="validation_203">Pin Can not be empty</string>
+    <string name="validation_204">Invalid Mobile Number</string>
+    <string name="validation_205">Password Field can not be empty</string>
+    <string name="validation_206">Cashier name field can not be empty</string>
+    <string name="validation_207">This pin does not match admin pin</string>
+    <string name="validation_209">Name Length must be less than 12 characters</string>
+    <string name="validation_210">Name Length must be more than 3 characters</string>
+    <string name="validation_211">This field can not be empty</string>
+    <string name="validation_212">Password Does not Exist</string>
+    <string name="validation_213">Password Does not Match</string>
+    <string name="validation_214">Invalid Email</string>
+    <string name="validation_215">To date can not be bigger than from date</string>
+    <string name="validation_216">date is bigger than current date</string>
+    <string name="validation_217">Click Search First</string>
+    <string name="validation_218">Required</string>
+
+
+    <string name="message_300">There is no pending order</string>
+    <string name="message_301">There is no available stock</string>
+    <string name="message_304">Syncing In Progress Please Don\'t Switch Off Or Cancel Process</string>
+    <string name="message_302">Generating Key Pair In Progress Please Don\'t Switch Off Or Cancel Process</string>
+    <string name="message_303">Now Downloading New App Version</string>
+    <string name="message_305">Downloading In Progress Please Don\'t Switch Off Or Cancel Process</string>
+    <string name="message_306">Your Order Is Reserved Fully</string>
+    <string name="message_307">No Available Items</string>
+
+    <string name="dialog_101">Manage pending orders first</string>
+    <string name="dialog_102">Out of location range</string>
+    <string name="dialog_103">Total Card items more than Max Total Card Per Order in terminal setting</string>
+    <string name="dialog_104"> Current Total Card items in Terminal more than Max Total Card In Terminal</string>
+    <string name="dialog_105">Maximum Quantity To Order is  </string>
+    <string name="dialog_106">Maximum Available Quantity is  </string>
+    <string name="dialog_107">Minimum Quantity To Order is  </string>
+    <string name="dialog_108">Number Of Selected Cards is Bigger Than Max Card Printing in terminal</string>
+    <string name="dialog_109">User is Not active</string>
+    <string name="dialog_110">You are up-to-date</string>
+    <string name="dialog_111">Success</string>
+    <string name="dialog_112">Please Select service first</string>
+    <string name="dialog_113">Card equal null</string>
+    <string name="dialog_114">Please Select Service First</string>
+    <string name="dialog_115">Are you sure you want to cancel order?</string>
+    <string name="dialog_118">Update is Mandatory,Updating Now please wait</string>
+    <string name="dialog_119">Update is Optional,Updating Now</string>
+    <string name="dialog_120">Card Does not exist</string>
+    <string name="dialog_121">New Version is updating</string>
+    <string name="dialog_122">Do you want to generate a new key pair?</string>
+    <string name="dialog_123">There is A mandatory Notification Please Click it first</string>
+    <string name="dialog_124">There is no available updates</string>
+    <string name="dialog_125">Error In Update URL</string>
+    <string name="dialog_126">Checking for updates</string>
+    <string name="dialog_127">You are updated</string>
+    <string name="dialog_129">There is no location provided, please contact administrator to configure location</string>
+    <string name="dialog_130">Printer Does not exist</string>
+    <string name="dialog_131">User Does not Exist</string>
+    <string name="dialog_132">Sales Report is Empty</string>
+    <string name="dialog_133">Card value is null</string>
+    <string name="dialog_134">Done Printing</string>
+    <string name="dialog_135">Done Loading Parameters</string>
+    <string name="dialog_136">There is no sales report</string>
+    <string name="dialog_137">These Permissions are needed to continue with application functionality</string>
+    <string name="dialog_138">Go to settings and enable permissions to continue with application functionality</string>
+    <string name="dialog_139">Do you want to sync sales with server and delete sales from machine?</string>
+    <string name="dialog_140">Do you want to inject new key?</string>
+    <string name="dialog_338">There is no pending orders</string>
+    <string name="dialog_339">There is no stock</string>
+    <string name="dialog_340">There is no services</string>
+
+    <string name="service_name">Service Name</string>
+    <string name="quantity">Quantity</string>
+    <string name="amount">Amount</string>
+    <string name="commission">Commission</string>
+    <string name="tax">Tax</string>
+    <string name="net_price">Net Price</string>
+    <string name="net_price_two_dots">Net Price:</string>
+    <string name="total_quantity">Total Quantity: </string>
+    <string name="group_by">Group By</string>
+    <string name="cashier_name">Cashier Name</string>
+    <string name="summary_cashier_name">Summary Grouped By Cashier Name</string>
+    <string name="details_cashier_name">Details Grouped By Cashier Name</string>
+    <string name="admin">admin</string>
+    <string name="none"> - None - </string>
+    <string name="purchase">Purchase</string>
+    <string name="serial_number_two_dots">Serial Number: </string>
+    <string name="your_services">Your Services</string>
+    <string name="item">item</string>
+    <string name="available_stock_two_dots">Available Stock:  </string>
+    <string name="mobile_number">Mobile Number</string>
+    <string name="charge">Charge</string>
+    <string name="bill_payment_text">Enter your number and pay your bill</string>
+    <string name="enter_your_amount">Enter Your Amount</string>
+    <string name="enter_your_number">Enter your Number</string>
+    <string name="remaining_is">Remaining is:</string>
+    <string name="remain">Remain</string>
+    <string name="old_password">Old Password</string>
+    <string name="new_password">New Password</string>
+    <string name="confirm_password">Confirm Password</string>
+    <string name="from_date">From Date</string>
+    <string name="to_date">To Date</string>
+    <string name="email">Email</string>
+    <string name="submit">Submit</string>
+    <string name="total_commission">Total Commission</string>
+    <string name="total_tax">Total Tax</string>
+    <string name="syncing">Syncing</string>
+    <string name="total">Total</string>
+    <string name="later">Later</string>
+
+    <string name="change_language">Change Language</string>
+    <string name="english">English</string>
+    <string name="arabic">Arabic</string>
+    <string name="current_balance">Current Balance</string>
+    <string name="virtual_limit">Virtual Limit</string>
+    <string name="virtual_sale">Virtual Sale</string>
+    <string name="top_up_limit">Top Up Limit</string>
+    <string name="top_up_sale">Top Up Sale</string>
+    <string name="bill_payment_limit">Bill Payment Limit</string>
+    <string name="bill_payment_sale">Bill Payment Sale</string>
+    <string name="check_updates">Check Updates</string>
+    <string name="default_notification_channel_id" translatable="false">fcm_default_channel</string>
+    <string name="default_notification_channel_name" translatable="false">Channel human readable title</string>
+    <string name="notification">Notification</string>
+    <string name="is_mandatory">is mandatory</string>
+    <string name="is_not_mandatory">is not mandatory</string>
+    <string name="reprint">Reprint</string>
+    <string name="serial_number">Serial Number</string>
+    <string name="cart">Cart</string>
+    <string name="tid" translatable="false">TID</string>
+    <string name="order_hash" translatable="false">Order #</string>
+    <string name="host_response_code" translatable="false">Host Response Code</string>
+    <string name="reference_no" translatable="false">Reference No.</string>
+    <string name="cashier" translatable="false">Cashier</string>
+    <string name="card_hash" translatable="false">Card #</string>
+    <string name="card_exp_date" translatable="false">Card Exp. Date</string>
+    <string name="terminal" translatable="false">Terminal</string>
+    <string name="logout">Logout</string>
+    <string name="continue_not_reserved">Continue</string>
+    <string name="timeout">timeout</string>
+    <string name="force_logout">Force Logout</string>
+    <string name="version">version</string>
+    <string name="closing_report">Closing report</string>
+    <string name="detailed_stock_report">Detailed Stock Report</string>
+    <string name="summary_stock_report">Summary Stock Report</string>
+    <string name="sub_no" translatable="false">Sub. No.</string>
+    <string name="old_bill" translatable="false">Old Bill</string>
+    <string name="paid_value" translatable="false">Paid Value</string>
+    <string name="remaining" translatable="false">Remaining</string>
+    <string name="ref_no" translatable="false">Ref. No.</string>
+
+</resources>

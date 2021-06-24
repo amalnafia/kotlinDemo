@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="fontFamily">@font/roboto</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="drawerArrowStyle">@style/MaterialDrawer.DrawerArrowStyle</item>
+    </style>
+
+    <style name="MaterialDrawer.DrawerArrowStyle" parent="Widget.AppCompat.DrawerArrowToggle">
+        <item name="spinBars">false</item>
+        <item name="color">@color/colorPrimaryDark</item>
+    </style>
+
+    <style name="bold">
+        <item name="android:fontFamily">@font/roboto_bold</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="medium">
+        <item name="android:fontFamily">@font/roboto_medium</item>
+    </style>
+
+    <style name="light">
+        <item name="android:fontFamily">@font/roboto_light</item>
+    </style>
+
+    <style name="regular">
+        <item name="android:fontFamily">@font/roboto</item>
+    </style>
+
+    <style name="progress_text_Style" parent="medium">
+        <item name="android:textSize">@dimen/medium_text_size</item>
+        <item name="android:textColor">@color/colorAccent</item>
+    </style>
+
+    <style name="no_internet_connection_text_style" parent="medium">
+        <item name="android:textSize">@dimen/medium_text_size</item>
+        <item name="android:textColor">@color/colorAccent</item>
+    </style>
+
+    <style name="app_button_style" parent="TextAppearance.MaterialComponents.Button">
+        <item name="fontFamily">@font/roboto_medium</item>
+        <item name="cornerRadius">5dp</item>
+        <item name="android:textColor">@android:color/white</item>
+        <item name="textAllCaps">false</item>
+        <item name="android:textSize">@dimen/medium_text_size</item>
+        <item name="backgroundTint">@color/colorAccent</item>
+        <item name="android:layout_marginStart">@dimen/medium_margin</item>
+        <item name="android:layout_marginEnd">@dimen/medium_margin</item>
+        <item name="android:layout_marginTop">@dimen/medium_margin</item>
+        <item name="android:layout_marginBottom">@dimen/medium_margin</item>
+    </style>
+
+    <style name="message_dialog_text_style" parent="medium">
+        <item name="android:textSize">@dimen/medium_text_size</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textAlignment">center</item>
+        <item name="android:layout_marginStart">@dimen/medium_margin</item>
+        <item name="android:layout_marginEnd">@dimen/medium_margin</item>
+        <item name="android:layout_marginTop">@dimen/xx_large_margin</item>
+    </style>
+
+    <style name="circleImageView">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">50%</item>
+    </style>
+
+    <style name="button_style" parent="TextAppearance.MaterialComponents.Button">
+        <item name="fontFamily">@font/roboto_medium</item>
+        <item name="cornerRadius">1dp</item>
+        <item name="android:textColor">@color/colorPrimaryDark</item>
+        <item name="textAllCaps">false</item>
+        <item name="elevation">0dp</item>
+        <item name="android:gravity">center</item>
+        <item name="android:paddingTop">@dimen/small_padding</item>
+        <item name="android:paddingBottom">@dimen/small_padding</item>
+        <item name="android:textSize">@dimen/medium_text_size</item>
+        <item name="backgroundTint">@color/colorAccent</item>
+    </style>
+
+    <style name="button_style.bold" parent="Widget.MaterialComponents.Button">
+        <item name="fontFamily">@font/roboto_bold</item>
+        <item name="cornerRadius">1dp</item>
+        <item name="android:textColor">@color/colorPrimaryDark</item>
+        <item name="textAllCaps">false</item>
+        <item name="elevation">0dp</item>
+        <item name="android:gravity">center</item>
+        <item name="android:paddingTop">@dimen/small_padding</item>
+        <item name="android:paddingBottom">@dimen/small_padding</item>
+        <item name="android:textSize">@dimen/medium_text_size</item>
+        <item name="backgroundTint">@color/colorAccent</item>
+    </style>
+
+    <style name="default_field_margin">
+        <item name="android:layout_marginEnd">@dimen/medium_margin</item>
+        <item name="android:layout_marginStart">@dimen/medium_margin</item>
+    </style>
+
+    <style name="text_input_layout_style" parent="default_field_margin">
+        <item name="startIconTint">@color/colorAccent</item>
+        <item name="boxBackgroundMode">outline</item>
+        <item name="boxStrokeColor">@color/edit_text_border_color</item>
+        <item name="boxBackgroundColor">@color/white</item>
+        <item name="boxStrokeWidth">1dp</item>
+        <item name="hintEnabled">false</item>
+        <item name="boxCollapsedPaddingTop">0.5dp</item>
+        <item name="boxStrokeWidthFocused">0.5dp</item>
+        <item name="hintAnimationEnabled">true</item>
+        <item name="passwordToggleTint">@color/colorAccent</item>
+        <item name="boxCornerRadiusBottomEnd">@dimen/default_btn_corner_radius</item>
+        <item name="boxCornerRadiusBottomStart">@dimen/default_btn_corner_radius</item>
+        <item name="boxCornerRadiusTopEnd">@dimen/default_btn_corner_radius</item>
+        <item name="boxCornerRadiusTopStart">@dimen/default_btn_corner_radius</item>
+        <item name="boxStrokeErrorColor">@android:color/holo_red_dark</item>
+        <item name="errorTextColor">@android:color/holo_red_dark</item>
+        <item name="errorIconDrawable">@drawable/ic_error</item>
+        <item name="errorIconTint">@android:color/holo_red_dark</item>
+    </style>
+
+    <style name="edit_text_style" parent="regular">
+        <item name="android:textColorHint">@color/colorPrimary</item>
+        <item name="android:textSize">@dimen/medium_text_size</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="colorControlNormal">@color/colorPrimary</item>
+        <item name="colorControlActivated">@color/colorAccent</item>
+<!--        <item name="android:textCursorDrawable">@drawable/color_accent_cursor_shape</item>-->
+        <item name="android:padding">15dp</item>
+    </style>
+
+
+
+
+    <style name="sales_report_style" parent="regular">
+        <item name="android:textSize">@dimen/small_text_size</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:paddingTop">@dimen/x_small_margin</item>
+        <item name="android:gravity">center</item>
+
+    </style>
+
+    <style name="edit_text_drop_down_style" parent="regular">
+        <item name="android:textSize">@dimen/medium_text_size</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="drawableEndCompat">@drawable/ic_down_arrow</item>
+        <item name="colorControlNormal">@color/black_transparent_text_color</item>
+        <item name="colorControlActivated">@color/colorAccent</item>
+        <item name="android:paddingStart">@dimen/medium_margin</item>
+        <item name="android:paddingEnd">@dimen/medium_margin</item>
+        <item name="android:focusable">false</item>
+        <item name="android:clickable">true</item>
+        <item name="android:inputType">text</item>
+        <item name="android:cursorVisible">false</item>
+        <item name="android:focusableInTouchMode">false</item>
+        <item name="singleLine">true</item>
+        <item name="android:maxLines">1</item>
+    </style>
+</resources>

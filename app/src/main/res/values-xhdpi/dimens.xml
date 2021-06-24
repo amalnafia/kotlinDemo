@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="state_bar_size">25dp</dimen>
+    <dimen name="radius">8dp</dimen>
+    <dimen name="progress_padding">12dp</dimen>
+    <dimen name="dialog_margin_top">30dp</dimen>
+    <dimen name="medium_margin">20dp</dimen>
+    <dimen name="xx_large_margin">45dp</dimen>
+    <dimen name="medium_text_size">17sp</dimen>
+    <dimen name="small_text_size">14sp</dimen>
+    <dimen name="large_text_size">20sp</dimen>
+    <dimen name="small_margin">8dp</dimen>
+    <dimen name="dialog_image_size">60dp</dimen>
+    <dimen name="default_btn_corner_radius">6dp</dimen>
+
+
+    <dimen name="small_icon_width">110dp</dimen>
+    <dimen name="small_icon_height">90dp</dimen>
+    <dimen name="medium_icon_width">120dp</dimen>
+    <dimen name="medium_icon_height">110dp</dimen>
+    <dimen name="x_small_icon_width">55dp</dimen>
+    <dimen name="x_small_icon_height">45dp</dimen>
+    <dimen name="large_margin">30dp</dimen>
+    <dimen name="x_large_margin">40dp</dimen>
+    <dimen name="x_small_margin">5dp</dimen>
+    <dimen name="small_padding">15dp</dimen>
+    <dimen name="small_radius">10dp</dimen>
+    <dimen name="medium_radius">25dp</dimen>
+    <dimen name="x_large_text_size">30sp</dimen>
+    <dimen name="x_small_icon_height_width">40dp</dimen>
+
+    <dimen name="purple_space">550dp</dimen>
+
+    <dimen name="input_layout_height">60dp</dimen>
+
+    <dimen name="smaller_small_icon_width">80dp</dimen>
+    <dimen name="smaller_small_icon_height">60dp</dimen>
+
+    <dimen name="medium_card_width">150dp</dimen>
+    <dimen name="large_card_width">330dp</dimen>
+
+    <dimen name="small_button_width_height">27dp</dimen>
+
+
+
+</resources>
