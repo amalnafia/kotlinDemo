@@ -43,5 +43,5 @@ class ApplicationModule {
 
     @Provides
     @Singleton
-    fun provideApiInterface(retrofit: Retrofit) = retrofit.create(ApiInterface::class.java)
+    fun provideApiInterface(retrofit: Retrofit): ApiInterface = retrofit.create(ApiInterface::class.java)
 }
