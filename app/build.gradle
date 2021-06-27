@@ -14,7 +14,7 @@ android {
         targetSdkVersion 30
         versionCode 1
         versionName "1.0"
-        buildConfigField 'String', 'BASE_URL', "\"\""
+        buildConfigField 'String', 'BASE_URL', "\"https://covidtracking.com/api/v1/\""
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }

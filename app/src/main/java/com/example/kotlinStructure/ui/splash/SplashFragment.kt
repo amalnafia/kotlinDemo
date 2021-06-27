@@ -3,6 +3,7 @@ package com.example.kotlinStructure.ui.splash
 
 import android.os.Bundle
 import android.os.Handler
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -38,6 +39,14 @@ class SplashFragment : Fragment() {
             animationView.visibility = View.GONE
             // navigate to main screen
         }, 3000)
+
+//        .makeApiCall()
+//        covidCasesViewModel.getNationalDataObserver().observe(viewLifecycleOwner, Observer {
+//            Log.d("TAG", "onCreate: " + it[0].dateChecked)
+//            setupEventListeners();
+//            nationalDailyData = it.reversed()
+//            updateDisplayWithData(nationalDailyData)
+//        })
     }
 
 }
