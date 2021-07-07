@@ -8,5 +8,15 @@
     <fragment
         android:id="@+id/splashFragment"
         android:name="com.example.kotlinStructure.ui.splash.SplashFragment"
-        tools:layout="@layout/splash_fragment" />
+        tools:layout="@layout/splash_fragment">
+        <action
+            android:id="@+id/action_splashFragment_to_settingFragment"
+            app:destination="@id/settingFragment"
+            app:popUpTo="@id/splashFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/settingFragment"
+        android:name="com.example.kotlinStructure.ui.setting.SettingFragment"
+        tools:layout="@layout/setting_fragment" />
 </navigation>

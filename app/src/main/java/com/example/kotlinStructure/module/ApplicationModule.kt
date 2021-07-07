@@ -1,15 +1,16 @@
 package com.example.kotlinStructure.module
 
-import com.example.kotlinStructure.BuildConfig
-import com.example.kotlinStructure.data.api.ApiInterface
+import android.content.Context
+import com.example.kotlinStructure.data.repository.DBRepository
+import com.example.kotlinStructure.data.room.AppDatabase
+import com.example.kotlinStructure.ui.dialog.CircleLoaderDialogFragment
+import com.example.kotlinStructure.util.SharedPrefHelper
+import com.example.kotlinStructure.util.ViewHelper
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
+import dagger.hilt.android.qualifiers.ApplicationContext
 import dagger.hilt.components.SingletonComponent
-import okhttp3.OkHttpClient
-import okhttp3.logging.HttpLoggingInterceptor
-import retrofit2.Retrofit
-import retrofit2.converter.gson.GsonConverterFactory
 import javax.inject.Singleton
 
 @Module
@@ -17,31 +18,44 @@ import javax.inject.Singleton
 class ApplicationModule {
 
     @Provides
-    fun provideBaseUrl() = BuildConfig.BASE_URL
-
-    @Provides
     @Singleton
-    fun provideOkHttpClient() = if (BuildConfig.DEBUG) {
-        val loggingInterceptor = HttpLoggingInterceptor()
-        loggingInterceptor.setLevel(HttpLoggingInterceptor.Level.BODY)
-        OkHttpClient.Builder()
-            .addInterceptor(loggingInterceptor)
-            .build()
-    } else OkHttpClient
-        .Builder()
-        .build()
+    fun provideApiInterface(): NetworkModule {
+        return NetworkModule()
+    }
 
-
-    @Provides
     @Singleton
-    fun provideRetrofit(okHttpClient: OkHttpClient, BASE_URL: String): Retrofit =
-        Retrofit.Builder()
-            .addConverterFactory(GsonConverterFactory.create())
-            .baseUrl(BASE_URL)
-            .client(okHttpClient)
-            .build()
-
     @Provides
+    fun provideViewHelper(): ViewHelper {
+        return ViewHelper()
+    }
+
+    //    @Singleton
+//    @Provides
+//    fun provideContext(): Context {
+//        return BaseApplication().getContext()
+//    }
+
     @Singleton
-    fun provideApiInterface(retrofit: Retrofit): ApiInterface = retrofit.create(ApiInterface::class.java)
+    @Provides
+    fun provideCircleLoaderDialogFragment(): CircleLoaderDialogFragment {
+        return CircleLoaderDialogFragment()
+    }
+
+    @Singleton
+    @Provides
+    fun provideAppDatabase(@ApplicationContext context: Context): AppDatabase {
+        return AppDatabase.getInstance(context)
+    }
+
+    @Singleton
+    @Provides
+    fun provideDBRepo(@ApplicationContext context: Context): DBRepository {
+        return DBRepository(provideAppDatabase(context).dbInterface(), context)
+    }
+
+    @Singleton
+    @Provides
+    fun provideSharedPrefHelper(): SharedPrefHelper {
+        return SharedPrefHelper()
+    }
 }

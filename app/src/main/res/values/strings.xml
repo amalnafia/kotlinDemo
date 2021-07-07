@@ -237,5 +237,7 @@
     <string name="paid_value" translatable="false">Paid Value</string>
     <string name="remaining" translatable="false">Remaining</string>
     <string name="ref_no" translatable="false">Ref. No.</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 
 </resources>

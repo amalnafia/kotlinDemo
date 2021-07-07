@@ -1,52 +1,28 @@
 package com.example.kotlinStructure.ui.splash
 
-
 import android.os.Bundle
 import android.os.Handler
-import android.util.Log
-import android.view.LayoutInflater
 import android.view.View
-import android.view.ViewGroup
-import androidx.fragment.app.Fragment
-import androidx.lifecycle.ViewModelProvider
+import androidx.fragment.app.viewModels
+import androidx.navigation.fragment.findNavController
 import com.example.kotlinStructure.R
-import com.example.kotlinStructure.ui.splash.SplashViewModel
+import com.example.kotlinStructure.base.BaseFragment
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.android.synthetic.main.splash_fragment.*
 
 @AndroidEntryPoint
-class SplashFragment : Fragment() {
+class SplashFragment : BaseFragment() {
 
-    companion object {
-        fun newInstance() = SplashFragment()
-    }
+    private val viewModel: SplashViewModel by viewModels()
 
-    private lateinit var viewModel: SplashViewModel
-
-    override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
-        savedInstanceState: Bundle?
-    ): View? {
-        return inflater.inflate(R.layout.splash_fragment, container, false)
-    }
+    override fun layoutId(): Int = R.layout.splash_fragment
 
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
-        viewModel = ViewModelProvider(this).get(SplashViewModel::class.java)
-        // TODO: Use the ViewModel
-        animationView.showContextMenu()
+        splashView.showContextMenu()
         Handler().postDelayed({
-            animationView.visibility = View.GONE
-            // navigate to main screen
+            findNavController().navigate(R.id.action_splashFragment_to_settingFragment)
+            splashView.visibility = View.GONE
         }, 3000)
-
-//        .makeApiCall()
-//        covidCasesViewModel.getNationalDataObserver().observe(viewLifecycleOwner, Observer {
-//            Log.d("TAG", "onCreate: " + it[0].dateChecked)
-//            setupEventListeners();
-//            nationalDailyData = it.reversed()
-//            updateDisplayWithData(nationalDailyData)
-//        })
     }
-
 }
