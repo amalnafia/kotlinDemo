@@ -13,11 +13,14 @@ import io.reactivex.plugins.RxJavaPlugins
 @HiltAndroidApp
 class BaseApplication : Application(), LifecycleObserver {
     companion object {
+        lateinit var baseApplication: BaseApplication
         lateinit var sharedPreferences: SharedPreferences
     }
 
     override fun onCreate() {
         super.onCreate()
+        baseApplication = this
+
         rxError()
         sharedPreferences = applicationContext.getSharedPreferences(
             sharedPreferenceName, Context.MODE_PRIVATE

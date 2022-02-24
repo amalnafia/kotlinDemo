@@ -14,9 +14,28 @@
             app:destination="@id/settingFragment"
             app:popUpTo="@id/splashFragment"
             app:popUpToInclusive="true" />
+        <argument
+            android:name="AppName"
+            app:argType="string" />
     </fragment>
     <fragment
         android:id="@+id/settingFragment"
         android:name="com.example.kotlinStructure.ui.setting.SettingFragment"
-        tools:layout="@layout/setting_fragment" />
+        tools:layout="@layout/setting_fragment">
+        <action
+            android:id="@+id/action_settingFragment_to_mapsFragment"
+            app:destination="@id/mapsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/mapsFragment"
+        android:name="com.example.kotlinStructure.ui.map.MapsFragment"
+        tools:layout="@layout/fragment_maps" />
+    <fragment
+        android:id="@+id/noInternetDialogFragment"
+        android:name="com.example.kotlinStructure.ui.noInternet.NoInternetDialogFragment"
+        android:label="fragment_no_internet"
+        tools:layout="@layout/fragment_no_internet" />
+    <action
+        android:id="@+id/action_global_noInternetDialogFragment"
+        app:destination="@id/noInternetDialogFragment" />
 </navigation>

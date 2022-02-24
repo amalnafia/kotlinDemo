@@ -2,68 +2,53 @@ package com.example.kotlinStructure.data.model.loadParameter
 
 import com.example.kotlinStructure.data.model.general.ResponseHeader
 import com.example.kotlinStructure.data.model.key.SecurityModel
+import com.example.kotlinStructure.data.model.notification.NotificationSender
+import com.example.kotlinStructure.data.model.notification.NotificationTypes
 import com.example.kotlinStructure.data.model.sevice.ServiceProvider
 import com.example.kotlinStructure.data.model.sevice.Services
 import com.example.kotlinStructure.data.model.terminalSetting.TerminalSetting
 import com.google.gson.annotations.SerializedName
 
-class LoadParameterResponse {
+class LoadParameterResponse(
+    responseHeader: ResponseHeader?,
+    terminalSetting: TerminalSetting?,
+    serviceProviders: List<ServiceProvider>?,
+    services: List<Services>?,
+    securityKey: SecurityModel?,
+    lastModifiedDate: String?,
+    notificationTypes: List<NotificationTypes>?,
+    notificationSender: List<NotificationSender>?,
+) {
 
     @SerializedName("responseHeader")
-    private var responseHeader: ResponseHeader? = null
+    var responseHeader: ResponseHeader? = responseHeader
+        private set
 
     @SerializedName("terminalSetting")
-    private var terminalSetting: TerminalSetting? = null
+    var terminalSetting: TerminalSetting? = terminalSetting
+        private set
 
     @SerializedName("serviceProviders")
-    private var serviceProviders: List<ServiceProvider>? = null
+    var serviceProviders: List<ServiceProvider>? = serviceProviders
+        private set
 
     @SerializedName("services")
-    private var services: List<Services>? = null
+    var services: List<Services>? = services
+        private set
 
     @SerializedName("securityKey")
-    private var securityKey: SecurityModel? = null
+    var securityKey: SecurityModel? = securityKey
+        private set
 
     @SerializedName("lastModifiedDate")
-    private var lastModifiedDate: String? = null
+    var lastModifiedDate: String? = lastModifiedDate
+        private set
 
-    fun getResponseHeader(): ResponseHeader? {
-        return responseHeader
-    }
+    @SerializedName("notificationTypes")
+    var notificationTypes: List<NotificationTypes>? = notificationTypes
+        private set
 
-    fun getTerminalSetting(): TerminalSetting? {
-        return terminalSetting
-    }
-
-    fun getServiceProviders(): List<ServiceProvider>? {
-        return serviceProviders
-    }
-
-    fun getServices(): List<Services>? {
-        return services
-    }
-
-    fun getSecurityKey(): SecurityModel? {
-        return securityKey
-    }
-
-    fun getLastModifiedDate(): String? {
-        return lastModifiedDate
-    }
-
-    fun LoadParametersResponse(
-        responseHeader: ResponseHeader?,
-        terminalSetting: TerminalSetting?,
-        serviceProviders: List<ServiceProvider>?,
-        services: List<Services>?,
-        securityKey: SecurityModel?,
-        lastModifiedDate: String?,
-    ) {
-        this.responseHeader = responseHeader
-        this.terminalSetting = terminalSetting
-        this.serviceProviders = serviceProviders
-        this.services = services
-        this.securityKey = securityKey
-        this.lastModifiedDate = lastModifiedDate
-    }
+    @SerializedName("notificationSenders")
+     var notificationSenders: List<NotificationSender>? = notificationSender
+        private set
 }

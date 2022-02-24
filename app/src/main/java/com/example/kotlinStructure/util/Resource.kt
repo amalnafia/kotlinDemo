@@ -16,5 +16,9 @@ data class Resource<out T>(val status: ApiStatus, val data: T?, val message: Str
         fun <T> loading(): Resource<T> {
             return Resource(ApiStatus.LOADING, null, null)
         }
+
+        fun <T> noInternet(msg: String): Resource<T> {
+            return Resource(ApiStatus.NOINTERNET, null, msg)
+        }
     }
 }

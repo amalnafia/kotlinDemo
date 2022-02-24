@@ -20,6 +20,7 @@ class SplashFragment : BaseFragment() {
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
         splashView.showContextMenu()
+//        SplashFragmentDirections.actionSplashFragmentToSettingFragment(AppName = "")
         Handler().postDelayed({
             findNavController().navigate(R.id.action_splashFragment_to_settingFragment)
             splashView.visibility = View.GONE

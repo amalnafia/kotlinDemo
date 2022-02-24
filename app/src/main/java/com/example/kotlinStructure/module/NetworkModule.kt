@@ -56,8 +56,9 @@ class NetworkModule {
 
     @Provides
     @Singleton
-    fun provideApiInterface(retrofit: Retrofit): ApiInterface =
-        retrofit.create(ApiInterface::class.java)
+    fun provideApiInterface(): ApiInterface {
+        return provideRetrofit().create(ApiInterface::class.java)
+    }
 
 
     @Singleton

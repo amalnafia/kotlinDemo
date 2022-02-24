@@ -36,6 +36,10 @@ class MainActivity : AppCompatActivity() {
             when (destination.id) {
                 R.id.splashFragment -> supportActionBar?.hide()
                 R.id.settingFragment -> this.supportActionBar?.hide()
+                R.id.mapsFragment -> {
+                    this.supportActionBar?.show()
+                    this.supportActionBar?.setTitle("Map")
+                }
             }
         }
 

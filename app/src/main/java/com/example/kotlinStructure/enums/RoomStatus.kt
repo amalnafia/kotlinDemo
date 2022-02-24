@@ -1,8 +1,7 @@
 package com.example.kotlinStructure.enums
 
-enum class ApiStatus {
+enum class RoomStatus {
     SUCCESS,
     ERROR,
     LOADING,
-    NOINTERNET
 }
