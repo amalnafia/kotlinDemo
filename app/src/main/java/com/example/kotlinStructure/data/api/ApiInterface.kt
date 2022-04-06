@@ -13,7 +13,7 @@ import retrofit2.http.POST
 interface ApiInterface {
 
     @POST("Authorize/GetToken")
-    fun getToken(@Body request: TokenRequest): Observable<TokenResponse>
+    suspend fun getToken(@Body request: TokenRequest): TokenResponse
 
     @POST("Setting/LoadParamters")
     fun getLoadParameters(

@@ -1,5 +1,6 @@
 package com.example.kotlinStructure.module
 
+import android.annotation.SuppressLint
 import android.content.Context
 import android.net.ConnectivityManager
 import android.net.NetworkCapabilities
@@ -10,6 +11,7 @@ import javax.inject.Singleton
 
 @Singleton
 class NetworkHelper @Inject constructor(@ApplicationContext private val context: Context) {
+    @SuppressLint("MissingPermission")
     fun isNetworkConnected(): Boolean {
         var result = false
         val connectivityManager =

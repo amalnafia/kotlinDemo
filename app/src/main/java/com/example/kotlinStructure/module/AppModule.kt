@@ -2,7 +2,6 @@ package com.example.kotlinStructure.module
 
 import android.content.Context
 import com.example.kotlinStructure.base.BaseApplication
-import com.example.kotlinStructure.data.repository.SettingRepository
 import com.example.kotlinStructure.data.room.AppDatabase
 import com.example.kotlinStructure.ui.dialog.CircleLoaderDialogFragment
 import com.example.kotlinStructure.util.SharedPrefHelper
@@ -10,7 +9,6 @@ import com.example.kotlinStructure.util.ViewHelper
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
-import dagger.hilt.android.qualifiers.ApplicationContext
 import dagger.hilt.components.SingletonComponent
 import javax.inject.Singleton
 
@@ -52,14 +50,5 @@ class AppModule {
     @Provides
     fun provideSharedPrefHelper(): SharedPrefHelper {
         return SharedPrefHelper()
-    }
-
-    @Singleton
-    @Provides
-    fun provideSettingRepository(): SettingRepository {
-        return SettingRepository(
-            provideNetworkModule().provideApiInterface(),
-            provideAppDatabase().dbInterface()
-        )
     }
 }
