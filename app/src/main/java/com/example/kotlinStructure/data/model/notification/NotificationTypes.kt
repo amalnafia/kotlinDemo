@@ -26,6 +26,6 @@ data class NotificationTypes(
     var code: String?,
 
     @field:SerializedName("bodytemplet")
-    @field:ColumnInfo(name = "bodytemplet")
+    @field:ColumnInfo(name = "bodyTemplate")
     var bodyTemplate: String?
 )

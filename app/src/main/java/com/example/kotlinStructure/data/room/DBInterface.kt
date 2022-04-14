@@ -8,29 +8,33 @@ import com.example.kotlinStructure.data.model.notification.NotificationTypes
 import com.example.kotlinStructure.data.model.sevice.ServiceProvider
 import com.example.kotlinStructure.data.model.sevice.Services
 import com.example.kotlinStructure.data.model.terminalSetting.TerminalSetting
-import io.reactivex.Completable
+import com.example.kotlinStructure.data.model.users.UsersManagement
 
 @Dao
 interface DBInterface {
 
+    //UserManagement
+    @Insert(onConflict = OnConflictStrategy.REPLACE)
+    suspend fun insertUsersManagement(usersManagement: UsersManagement)
+
     //TerminalSetting
     @Insert(onConflict = OnConflictStrategy.REPLACE)
-    fun insertTerminalSetting(terminalSetting: TerminalSetting): Completable
+    suspend fun insertTerminalSetting(terminalSetting: TerminalSetting)
 
     //NotificationSender
     @Insert(onConflict = OnConflictStrategy.REPLACE)
-    fun insertNotificationSenderList(notificationSenderList: List<NotificationSender>): Completable
+    suspend fun insertNotificationSenderList(notificationSenderList: List<NotificationSender>)
 
     //NotificationType
     @Insert(onConflict = OnConflictStrategy.REPLACE)
-    fun insertNotificationTypeList(notificationTypeList: List<NotificationTypes>): Completable
+    suspend fun insertNotificationTypeList(notificationTypeList: List<NotificationTypes>)
 
     //ServiceProvider
     @Insert(onConflict = OnConflictStrategy.REPLACE)
-    fun insertServiceProviderList(serviceProviderList: List<ServiceProvider>): Completable
+    suspend fun insertServiceProviderList(serviceProviderList: List<ServiceProvider>)
 
     //Services
     @Insert(onConflict = OnConflictStrategy.REPLACE)
-    fun insertServicesList(servicesList: List<Services>): Completable
+    suspend fun insertServicesList(servicesList: List<Services>)
 
 }

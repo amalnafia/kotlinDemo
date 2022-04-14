@@ -6,142 +6,146 @@ import androidx.room.PrimaryKey
 import com.google.gson.annotations.SerializedName
 
 @Entity(tableName = "TerminalSetting")
-class TerminalSetting {
+data class TerminalSetting(
     @PrimaryKey
     @ColumnInfo(name = "terminalID")
     @SerializedName("terminalID")
-    var terminalID: String = null.toString()
+    var terminalID: String,
 
-    @ColumnInfo(name = "distrbuterID")
+    @ColumnInfo(name = "distributorID")
     @SerializedName("distrbuterID")
-    var distributorID: String? = null
+    var distributorID: String?,
 
     @ColumnInfo(name = "terminalNameEn")
     @SerializedName("terminalNameEn")
-    var terminalNameEn: String? = null
+    var terminalNameEn: String?,
 
     @ColumnInfo(name = "terminalNameAr")
     @SerializedName("terminalNameAr")
-    var terminalNameAr: String? = null
+    var terminalNameAr: String?,
 
-    @ColumnInfo(name = "distrbuterNameEn")
+    @ColumnInfo(name = "distributorNameEn")
     @SerializedName("distrbuterNameEn")
-    var distributorNameEn: String? = null
+    var distributorNameEn: String?,
 
-    @ColumnInfo(name = "distrbuterNameAr")
+    @ColumnInfo(name = "distributorNameAr")
     @SerializedName("distrbuterNameAr")
-    var distributorNameAr: String? = null
+    var distributorNameAr: String?,
 
-    @ColumnInfo(name = "distrbuterMessageEn")
+    @ColumnInfo(name = "distributorMessageEn")
     @SerializedName("distrbuterMessageEn")
-    var distributorMessageEn: String? = null
+    var distributorMessageEn: String?,
 
-    @ColumnInfo(name = "distrbuterMessageAr")
+    @ColumnInfo(name = "distributorMessageAr")
     @SerializedName("distrbuterMessageAr")
-    var distributorMessageAr: String? = null
+    var distributorMessageAr: String?,
 
-    @ColumnInfo(name = "distrbuterLogo")
+    @ColumnInfo(name = "distributorLogo")
     @SerializedName("distrbuterLogo")
-    var distributorLogo: String? = null
+    var distributorLogo: String?,
 
-    @ColumnInfo(name = "distrbuterVoucherLogo")
+    @ColumnInfo(name = "distributorVoucherLogo")
     @SerializedName("distrbuterVoucherLogo")
-    var distributorVoucherLogo: String? = null
+    var distributorVoucherLogo: String?,
 
-    @ColumnInfo(name = "distrbuterLogoEnable")
+    @ColumnInfo(name = "distributorLogoEnable")
     @SerializedName("distrbuterLogoEnable")
-    var distributorLogoEnable = 0
+    var distributorLogoEnable: Int,
 
     @ColumnInfo(name = "terminalLogo")
     @SerializedName("terminalLogo")
-    var terminalLogo: String? = null
+    var terminalLogo: String?,
 
     @ColumnInfo(name = "enableOffline")
     @SerializedName("enableOffline")
-    var enableOffline = 0
+    var enableOffline: Int,
 
     @ColumnInfo(name = "enableOnline")
     @SerializedName("enableOnline")
-    var enableOnline = 0
+    var enableOnline: Int,
 
-    @ColumnInfo(name = "enableBillpayment")
+    @ColumnInfo(name = "enableBillPayment")
     @SerializedName("enableBillpayment")
-    var enableBillPayment = 0
+    var enableBillPayment: Int,
 
-    @ColumnInfo(name = "enableTopup")
+    @ColumnInfo(name = "enableTopUp")
     @SerializedName("enableTopup")
-    var enableTopUp = 0
+    var enableTopUp: Int,
 
     @ColumnInfo(name = "maxTotalCardPerOrder")
     @SerializedName("maxTotalCardPerOrder")
-    var maxTotalCardPerOrder = 0
+    var maxTotalCardPerOrder: Int,
 
     @ColumnInfo(name = "syncEveryServiceCount")
     @SerializedName("syncEveryServiceCount")
-    var syncEveryServiceCount = 0
+    var syncEveryServiceCount: Int,
 
     @ColumnInfo(name = "maxCardPrinting")
     @SerializedName("maxCardPrinting")
-    var maxCardPrinting = 0
+    var maxCardPrinting: Int,
 
     @ColumnInfo(name = "enableReprint")
     @SerializedName("enableReprint")
-    var enableReprint = 0
+    var enableReprint: Int,
 
     @ColumnInfo(name = "latitude")
     @SerializedName("latitude")
-    var latitude: String? = null
+    var latitude: String?,
 
     @ColumnInfo(name = "longitude")
     @SerializedName("longitude")
-    var longitude: String? = null
+    var longitude: String?,
 
     @ColumnInfo(name = "checkGps")
     @SerializedName("checkGps")
-    var checkGps = 0
+    var checkGps: Int,
 
     @ColumnInfo(name = "evBalanceType")
     @SerializedName("evBalanceType")
-    var evBalanceType: String? = null
+    var evBalanceType: String?,
 
     @ColumnInfo(name = "operatorLogo")
     @SerializedName("operatorLogo")
-    var operatorLogo: String? = null
+    var operatorLogo: String?,
 
     @ColumnInfo(name = "currency")
     @SerializedName("currency")
-    var currency: String? = null
+    var currency: String?,
 
     @ColumnInfo(name = "decimalNo")
     @SerializedName("decimalNo")
-    var decimalNo = 0
+    var decimalNo: Int,
 
     @ColumnInfo(name = "maxTotalCardInTerminal")
     @SerializedName("maxTotalCardInTerminal")
-    var maxTotalCardInTerminal = 0
+    var maxTotalCardInTerminal: Int,
 
     @ColumnInfo(name = "currentTotalCardInTerminal")
-    var currentTotalCardInTerminal = 0
+    var currentTotalCardInTerminal: Int,
 
     @ColumnInfo(name = "lastUpdatedDate")
-    var lastUpdatedDate: String? = null
+    var lastUpdatedDate: String?,
 
     @ColumnInfo(name = "passwordChanged")
     @SerializedName("passwordChanged")
-    var isPasswordChanged = false
+    var isPasswordChanged: Boolean,
 
     @ColumnInfo(name = "isLocked")
-    var isLocked = false
+    var isLocked: Boolean,
 
     @ColumnInfo(name = "reprintLimit")
     @SerializedName("reprintLimit")
-    var reprintLimit = 0
+    var reprintLimit: Int,
 
     @ColumnInfo(name = "poweredBy")
     @SerializedName("poweredBy")
-    var poweredBy: String? = null
+    var poweredBy: String?,
 
     @ColumnInfo(name = "enableQR")
     @SerializedName("enableQR")
-    var enableQR = 0
-}
+    var enableQR: Int,
+
+    @ColumnInfo(name = "enableResetLimit")
+    @SerializedName("enableResetLimit")
+    var enableResetLimit: Int
+)

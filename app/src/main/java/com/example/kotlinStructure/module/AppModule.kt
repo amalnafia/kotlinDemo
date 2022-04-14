@@ -2,8 +2,10 @@ package com.example.kotlinStructure.module
 
 import android.content.Context
 import com.example.kotlinStructure.base.BaseApplication
+import com.example.kotlinStructure.data.api.ApiInterface
 import com.example.kotlinStructure.data.room.AppDatabase
 import com.example.kotlinStructure.ui.dialog.CircleLoaderDialogFragment
+import com.example.kotlinStructure.ui.setting.SettingRepository
 import com.example.kotlinStructure.util.SharedPrefHelper
 import com.example.kotlinStructure.util.ViewHelper
 import dagger.Module
@@ -50,5 +52,11 @@ class AppModule {
     @Provides
     fun provideSharedPrefHelper(): SharedPrefHelper {
         return SharedPrefHelper()
+    }
+
+    @Singleton
+    @Provides
+    fun provideSettingRepository(apiInterface: ApiInterface): SettingRepository {
+        return SettingRepository(apiInterface, provideAppDatabase().dbInterface())
     }
 }

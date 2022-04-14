@@ -7,7 +7,7 @@ import com.google.gson.annotations.SerializedName
 
 
 @Entity(tableName = "Services")
-class Services(
+data class Services(
     @PrimaryKey
     @ColumnInfo(name = "id")
     @SerializedName("id")
@@ -115,7 +115,6 @@ class Services(
     @SerializedName("evServiceProvider_FK_ID")
     var evServiceProvider_FK_ID: Int = 0,
 
-
     @ColumnInfo(name = "voucherLogoBase64")
     var voucherLogoBase64: String? = null,
 
@@ -135,5 +134,5 @@ class Services(
 
     @ColumnInfo(name = "voucherQuickCode")
     @SerializedName("voucherQuickCode")
-    var voucherQuickCode: String? = null
+    var voucherQuickCode: String?
 )

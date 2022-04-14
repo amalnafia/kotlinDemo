@@ -1,10 +1,6 @@
 package com.example.kotlinStructure.base
 
 import android.content.pm.PackageManager
-import android.os.Bundle
-import android.view.LayoutInflater
-import android.view.View
-import android.view.ViewGroup
 import androidx.core.app.ActivityCompat
 import androidx.core.content.ContextCompat
 import androidx.fragment.app.Fragment
@@ -21,15 +17,6 @@ abstract class BaseFragment : Fragment() {
 
     @Inject
     lateinit var circleLoaderDialogFragment: CircleLoaderDialogFragment
-
-    abstract fun layoutId(): Int
-
-    override fun onCreateView(
-        inflater: LayoutInflater,
-        container: ViewGroup?,
-        savedInstanceState: Bundle?,
-    ): View =
-        inflater.inflate(layoutId(), container, false)
 
     open fun showLoader() {
         circleLoaderDialogFragment.showDialog(parentFragmentManager)
@@ -59,8 +46,11 @@ abstract class BaseFragment : Fragment() {
 
     open fun checkPermission(requestCode: Int, permission: String): Boolean {
         return if (!isPermissionGranted(requestCode, permission)) {
-            ActivityCompat.requestPermissions(this.requireActivity(),
-                arrayOf(permission), requestCode)
+            ActivityCompat.requestPermissions(
+                this.requireActivity(),
+                arrayOf(permission),
+                requestCode
+            )
             false
         } else
             true
@@ -68,8 +58,10 @@ abstract class BaseFragment : Fragment() {
 
 
     open fun isPermissionGranted(requestCode: Int, permission: String): Boolean {
-        return ContextCompat.checkSelfPermission(requireContext(),
-            permission) == PackageManager.PERMISSION_GRANTED
+        return ContextCompat.checkSelfPermission(
+            requireContext(),
+            permission
+        ) == PackageManager.PERMISSION_GRANTED
     }
 
     override fun onRequestPermissionsResult(

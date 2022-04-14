@@ -9,5 +9,5 @@ data class TokenResponse(
     @SerializedName("expireDate")
     var expireDate: String?,
     @SerializedName("responseHeader")
-    private var responseHeader: ResponseHeader?,
+    var responseHeader: ResponseHeader?,
 )

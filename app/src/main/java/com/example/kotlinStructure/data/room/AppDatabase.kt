@@ -9,10 +9,11 @@ import com.example.kotlinStructure.data.model.notification.NotificationTypes
 import com.example.kotlinStructure.data.model.sevice.ServiceProvider
 import com.example.kotlinStructure.data.model.sevice.Services
 import com.example.kotlinStructure.data.model.terminalSetting.TerminalSetting
+import com.example.kotlinStructure.data.model.users.UsersManagement
 import com.example.kotlinStructure.util.Constants.databaseName
 
 @Database(
-    entities = [TerminalSetting::class, ServiceProvider::class, Services::class,
+    entities = [UsersManagement::class, TerminalSetting::class, ServiceProvider::class, Services::class,
         NotificationTypes::class, NotificationSender::class], version = 1, exportSchema = false
 )
 abstract class AppDatabase : RoomDatabase() {

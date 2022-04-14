@@ -2,48 +2,17 @@ package com.example.kotlinStructure.data.model.general
 
 import com.google.gson.annotations.SerializedName
 
-class ResponseHeader {
-
+data class ResponseHeader(
     @SerializedName("version")
-    private val version: String? = null
-
+    var version: String,
     @SerializedName("statusCode")
-    private val statusCode = 0
-
+    var statusCode: Int,
     @SerializedName("requestId")
-    private val requestId: String? = null
-
+    var requestId: String,
     @SerializedName("error")
-    private val error: List<String?>? = null
-
+    var error: List<String>,
     @SerializedName("success")
-    private val success = false
-
+    var success: Boolean,
     @SerializedName("message")
-    private val message: String? = null
-
-    fun getVersion(): String? {
-        return version
-    }
-
-    fun getStatusCode(): Int {
-        return statusCode
-    }
-
-    fun getRequestId(): String? {
-        return requestId
-    }
-
-    fun getError(): List<String?>? {
-        return error
-    }
-
-    fun isSuccess(): Boolean {
-        return success
-    }
-
-    fun getMessage(): String? {
-        return message
-    }
-
-}
+    var message: String
+)
